@@ -12,7 +12,8 @@ exports.CreateWallet = async (req, res, next) =>{
 
         const newAddress = new AddWallet({
             walletAddress: walletAddress,
-            walletName: walletName
+            walletName: walletName,
+            coin: coin
         })
 
         await newAddress.save()
@@ -39,10 +40,11 @@ exports.getAllWalletAddress =async (req, res, next) => {
 
 exports.updateWalletAddress = async (req, res) => {
     try {
-        const { walletAddress, walletName} = req.body;
+        const { walletAddress, walletName, coin} = req.body;
         const updatedwallet = {
             walletAddress,
-            walletName
+            walletName,
+            coin
         };
         const newWallet = await AddWallet.findByIdAndUpdate(req.params.id, updatedwallet, { new: true });
         if (!newWallet) {
