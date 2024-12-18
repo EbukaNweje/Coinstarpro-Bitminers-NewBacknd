@@ -7,7 +7,7 @@ const AddWallet =  new mongoose.Schema({
         uniquw: true
     },
 
-    welletAddress: {
+    walletAddress: {
         type: String,
         required: true
     }
