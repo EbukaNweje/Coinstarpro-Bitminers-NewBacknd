@@ -27,7 +27,7 @@ exports.deposit = async (req, res) => {
             });
         }
 
-        if (coin != "BTC" && coin != "ETH") {
+        if (coin != "Bitcoin" && coin != "Ethereum") {
             return res.status(404).json({
                 message: `Coin not available`
             });
@@ -37,13 +37,13 @@ exports.deposit = async (req, res) => {
         let response;
         let roundedNumber;
 
-        if (coin == "BTC") {
+        if (coin == "Bitcoin") {
             response = await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&precision=5`);
             const conversionRates = response.data.bitcoin.usd;
             const myTotal = Number(conversionRates);
             const btcAmount = newAmount / myTotal;
             roundedNumber = btcAmount.toFixed(9);
-        } else if (coin == "ETH") {
+        } else if (coin == "Ethereum") {
             response = await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&precision=5`);
             const conversionRates = response.data.ethereum.usd;
             const myTotal = Number(conversionRates);
