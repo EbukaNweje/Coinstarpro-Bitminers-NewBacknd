@@ -8,7 +8,7 @@ exports.CreateWallet = async (req, res, next) =>{
           return res.status(400).json({ errors: errors.array()});
         }
 
-        const {walletName, walletAddress} = req.body
+        const {walletName, walletAddress, coin} = req.body
 
         const newAddress = new AddWallet({
             walletAddress: walletAddress,
