@@ -8,11 +8,11 @@ exports.CreateWallet = async (req, res, next) =>{
           return res.status(400).json({ errors: errors.array()});
         }
 
-        const {welletName, welletAddress} = req.body
+        const {walletName, walletAddress} = req.body
 
         const newAddress = new AddWallet({
-            welletAddress: welletAddress,
-            welletName: welletName
+            welletAddress: walletAddress,
+            walletName: walletName
         })
 
         await newAddress.save()
@@ -39,10 +39,10 @@ exports.getAllWalletAddress =async (req, res, next) => {
 
 exports.updateWalletAddress = async (req, res) => {
     try {
-        const { welletAddress, welletName} = req.body;
+        const { walletAddress, walletName} = req.body;
         const updatedwallet = {
-            welletAddress,
-            welletName
+            walletAddress,
+            walletName
         };
         const newWallet = await AddWallet.findByIdAndUpdate(req.params.id, updatedwallet, { new: true });
         if (!newWallet) {

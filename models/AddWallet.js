@@ -1,7 +1,7 @@
 const mongoose  = require("mongoose")
 
 const AddWallet =  new mongoose.Schema({
-    welletName: {
+    walletName: {
         type: String,
         required: true,
         uniquw: true
