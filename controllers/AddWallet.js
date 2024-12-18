@@ -11,7 +11,7 @@ exports.CreateWallet = async (req, res, next) =>{
         const {walletName, walletAddress} = req.body
 
         const newAddress = new AddWallet({
-            welletAddress: walletAddress,
+            walletAddress: walletAddress,
             walletName: walletName
         })
 
