@@ -188,25 +188,7 @@ exports.addProfit = async (req, res) => {
             });
         }
 
-        // Add profit details to the Interest collection
-        const profit = new InterestModel({
-            user: user._id,
-            amount: profitAmount,
-        });
-        await profit.save();
-
-        // Update the user's account balance and total profit
-        user.accountBalance += profitAmount;
-        user.totalProfit = (user.totalProfit || 0) + profitAmount;
-        await user.save();
-
-        // Create a transaction history entry
-        const history = new historyModel({
-            id: user._id,
-            transactionType: 'Profit',
-            amount: profitAmount,
-        });
-        await history.save();
+        
 
         // Send a success response
         return res.status(200).json({
