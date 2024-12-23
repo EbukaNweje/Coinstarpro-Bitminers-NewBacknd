@@ -164,3 +164,59 @@ exports.confirmWithdraw = async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 };
+
+
+
+exports.addProfit = async (req, res) => {
+    try {
+        // Extract user ID and profit details from the request
+        const { id } = req.params;
+
+        // Validate the profit amount
+        const profitAmount = Number(amount);
+        if (profitAmount <= 0 || isNaN(profitAmount)) {
+            return res.status(400).json({
+                message: 'Profit amount must be greater than 0',
+            });
+        }
+
+        // Find the user
+        const user = await userModel.findById(id);
+        if (!user) {
+            return res.status(404).json({
+                message: 'User not found',
+            });
+        }
+
+        // Add profit details to the Interest collection
+        const profit = new InterestModel({
+            user: user._id,
+            amount: profitAmount,
+        });
+        await profit.save();
+
+        // Update the user's account balance and total profit
+        user.accountBalance += profitAmount;
+        user.totalProfit = (user.totalProfit || 0) + profitAmount;
+        await user.save();
+
+        // Create a transaction history entry
+        const history = new historyModel({
+            id: user._id,
+            transactionType: 'Profit',
+            amount: profitAmount,
+        });
+        await history.save();
+
+        // Send a success response
+        return res.status(200).json({
+            message: `Profit of ${profitAmount} added successfully to user ${user.fullName}`,
+        });
+    } catch (err) {
+        // Handle errors
+        console.error(err);
+        return res.status(500).json({
+            message: err.message,
+        });
+    }
+};

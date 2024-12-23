@@ -11,17 +11,17 @@ const interestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    plan: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'InvestmentPlan'
-    },
+    // plan: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'InvestmentPlan'
+    // },
     amount: {
         type: Number,
         required: true
     },
     transactionType: {
         type: String,
-        default: 'Interest'
+        default: 'Profit'
     },
     Date:{
         type:String,
