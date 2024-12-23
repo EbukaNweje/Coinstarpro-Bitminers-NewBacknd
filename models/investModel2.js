@@ -56,7 +56,7 @@ const InvestSchema = new mongoose.Schema({
     },
     transactionType: {
         type: String,
-        default: "Invest"
+        default: "Profit"
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
