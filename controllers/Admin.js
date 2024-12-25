@@ -167,18 +167,74 @@ exports.confirmWithdraw = async (req, res) => {
 
 
 
+// exports.addProfit = async (req, res) => {
+//     try {
+//         // Extract user ID and profit details from the request
+//         const { id } = req.params;
+
+//         const {profitAmount} = req.body
+
+//         // Validate the profit amount
+//          profitAmount = Number(amount);
+//         if (profitAmount <= 0 || isNaN(profitAmount)) {
+//             return res.status(400).json({
+//                 message: 'Profit amount must be greater than 0',
+//             });
+//         }
+
+//         // Find the user
+//         const user = await userModel.findById(id);
+//         if (!user) {
+//             return res.status(404).json({
+//                 message: 'User not found',
+//             });
+//         }
+
+//         // Add profit details to the Interest collection
+//         const profit = new InterestModel({
+//             user: user._id,
+//             amount: profitAmount,
+//         });
+//         await profit.save();
+
+//         // Update the user's account balance and total profit
+//         user.accountBalance += profitAmount;
+//         user.totalProfit = (user.totalProfit || 0) + profitAmount;
+//         await user.save();
+
+//         // Create a transaction history entry
+//         const history = new historyModel({
+//             id: user._id,
+//             transactionType: 'Profit',
+//             amount: profitAmount,
+//         });
+//         await history.save();
+
+//         // Send a success response
+//         return res.status(200).json({
+//             message: `Profit of ${profitAmount} added successfully to user ${user.fullName}`,
+//         });
+//     } catch (err) {
+//         // Handle errors
+//         console.error(err);
+//         return res.status(500).json({
+//             message: err.message,
+//         });
+//     }
+// };
+
+
 exports.addProfit = async (req, res) => {
     try {
-        // Extract user ID and profit details from the request
+        // Extract user ID from the request parameters and profitAmount from the request body
         const { id } = req.params;
-
-        const {profitAmount} = req.body
+        const { profitAmount } = req.body;
 
         // Validate the profit amount
-         profitAmount = Number(amount);
-        if (profitAmount <= 0 || isNaN(profitAmount)) {
+        const amount = Number(profitAmount);
+        if (amount <= 0 || isNaN(amount)) {
             return res.status(400).json({
-                message: 'Profit amount must be greater than 0',
+                message: 'Profit amount must be a number greater than 0',
             });
         }
 
@@ -193,32 +249,33 @@ exports.addProfit = async (req, res) => {
         // Add profit details to the Interest collection
         const profit = new InterestModel({
             user: user._id,
-            amount: profitAmount,
+            amount: amount,
         });
         await profit.save();
 
         // Update the user's account balance and total profit
-        user.accountBalance += profitAmount;
-        user.totalProfit = (user.totalProfit || 0) + profitAmount;
+        user.accountBalance += amount;
+        user.totalProfit = (user.totalProfit || 0) + amount;
         await user.save();
 
         // Create a transaction history entry
         const history = new historyModel({
-            id: user._id,
+            userId: user._id,
             transactionType: 'Profit',
-            amount: profitAmount,
+            amount: amount,
         });
         await history.save();
 
         // Send a success response
         return res.status(200).json({
-            message: `Profit of ${profitAmount} added successfully to user ${user.fullName}`,
+            message: `Profit of ${amount} added successfully to user ${user.fullName}`,
         });
     } catch (err) {
         // Handle errors
         console.error(err);
         return res.status(500).json({
-            message: err.message,
+            message: 'An error occurred while adding profit',
+            error: err.message,
         });
     }
 };
