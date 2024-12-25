@@ -6,6 +6,8 @@ const {validationResult } = require('express-validator');
 const depositModel = require('../models/depositModel');
 const userModel = require('../models/User');
 const withdrawModel = require("../models/withdrawModel");
+const InterestModel = require("../models/InterestModel");
+const historyModel = require("../models/historyModel");
 
 exports.register = async (req, res, next)=>{
     try{
