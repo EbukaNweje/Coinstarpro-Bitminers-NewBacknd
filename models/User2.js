@@ -139,5 +139,5 @@ totalWithdrawal: {
 
 }, {timestamps: true});
 
-module.exports = User = mongoose.model('User', UserSchema )
+module.exports = User = mongoose.model('User1', UserSchema )
 
