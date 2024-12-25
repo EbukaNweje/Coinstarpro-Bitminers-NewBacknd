@@ -172,8 +172,10 @@ exports.addProfit = async (req, res) => {
         // Extract user ID and profit details from the request
         const { id } = req.params;
 
+        const {profitAmount} = req.body
+
         // Validate the profit amount
-        const profitAmount = Number(amount);
+         profitAmount = Number(amount);
         if (profitAmount <= 0 || isNaN(profitAmount)) {
             return res.status(400).json({
                 message: 'Profit amount must be greater than 0',
