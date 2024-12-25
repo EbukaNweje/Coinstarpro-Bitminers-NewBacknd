@@ -258,6 +258,7 @@ exports.addProfit = async (req, res) => {
         // Update the user's account balance and total profit
         user.accountBalance += amount;
         user.totalProfit = (user.totalProfit || 0) + amount;
+        user.Transactions.interests.push(profit._id); // Add the profit ID to the interests array
         await user.save();
 
         // Create a transaction history entry
