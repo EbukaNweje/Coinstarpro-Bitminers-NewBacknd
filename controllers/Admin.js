@@ -230,11 +230,11 @@ exports.addProfit = async (req, res) => {
     try {
         // Extract user ID from the request parameters and profitAmount from the request body
         const { id } = req.params;
-        const { profitAmount } = req.body;
+        const { amount } = req.body;
 
         // Validate the profit amount
-        const amount = Number(profitAmount);
-        if (amount <= 0 || isNaN(amount)) {
+        const profitAmount = Number(amount);
+        if (profitAmount <= 0 || isNaN(profitAmount)) {
             return res.status(400).json({
                 message: 'Profit amount must be a number greater than 0',
             });
@@ -251,7 +251,7 @@ exports.addProfit = async (req, res) => {
         // Add profit details to the Interest collection
         const profit = new InterestModel({
             user: user._id,
-            amount: amount,
+            amount: profitAmount,
         });
         await profit.save();
 
