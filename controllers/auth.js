@@ -169,7 +169,7 @@ exports.verifySuccessful = async (req, res, next) => {
           subject: "Successful Registration",
         html: `
           <img src="cid:OKX EXCHANGE" Style="width:100%; height: 50%;"/>
-         <h4 style="font-size:25px;">Hi ${verifyuser.fullName}!</h4> 
+         <h4 style="font-size:25px;">Hi ${verifyuser.userName}!</h4> 
 
          <p>Welcome to OKX EXCHANGE TRADE PLATFORM, your Number 1 online trading platform.</p>
 
@@ -199,7 +199,7 @@ exports.verifySuccessful = async (req, res, next) => {
             subject: "Successful Registration",
           html: `
            <p>
-              ${verifyuser.fullName} <br>
+              ${verifyuser.userName} <br>
               ${verifyuser.email}  <br>
               ${verifyuser.phoneNumber} <br>
               ${verifyuser.gender}  <br>
@@ -392,28 +392,28 @@ exports.AdminAproveEmailSand = async (req, res, next) =>{
                     </tr>
                     <tr>
                         <td style="padding: 20px 0;">
-                            <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                            <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                            <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                            <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                         </td>
                     </tr>
                 </table>
             </div>
     
             <div class="content">
-                <p>Hi ${UserEmail.fullName},</p>
-                <p>Your Trading account has been approved successfully.<br><br>Folle this link to login: https://coinstarprobitminers.vercel.app/auth51d2.html?route=login<br><br>You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.</p>
+                <p>Hi ${UserEmail.userName},</p>
+                <p>Your Trading account has been approved successfully.<br><br>Folle this link to login: https://myfininvestohubs-dashboard.vercel.app/<br><br>You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.</p>
                 <p>For more enquiries, kindly contact your account manager or use our live chat support on our platform. You can also send a direct mail to us at <span style="color: #4c7fff;">${process.env.USER}</span></p>
                 <p>Thank you for choosing our platform. We wish you successful trading.</p>
             </div>
     
             <div class="footer">
                 <div class="footer-content">
-                    <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                    <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                         <img src="footer-logo.png" alt="">
                     </div>
                     <div class="footer-info">
                         <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                        <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                        <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -432,7 +432,7 @@ exports.AdminAproveEmailSand = async (req, res, next) =>{
     subject: "Successful Registration",
   html: `
    <p>
-          ${UserEmail.fullName} <br>
+          ${UserEmail.userName} <br>
               ${UserEmail.email}  <br>
               ${UserEmail.phoneNumber} <br>
               ${UserEmail.gender}  <br>
@@ -551,28 +551,28 @@ exports.signupEmailSand = async (req, res, next) =>{
                     </tr>
                     <tr>
                         <td style="padding: 20px 0;">
-                            <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                            <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                            <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                            <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                         </td>
                     </tr>
                 </table>
             </div>
     
             <div class="content">
-                <p>Hi ${UserEmail.fullName},</p>
-                <p>Welcome to Coinstarpro Bitminers, your Number 1 online trading platform.<br><br>Your Trading account has been set up successfully.<br><br>You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.</p>
+                <p>Hi ${UserEmail.userName},</p>
+                <p>Welcome to Fininvestohub, your Number 1 online trading platform.<br><br>Your Trading account has been set up successfully.<br><br>You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.</p>
                 <p>For more enquiries, kindly contact your account manager or use our live chat support on our platform. You can also send a direct mail to us at <span style="color: #4c7fff;">${process.env.USER}</span></p>
                 <p>Thank you for choosing our platform. We wish you successful trading.</p>
             </div>
     
             <div class="footer">
                 <div class="footer-content">
-                    <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                    <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                         <img src="footer-logo.png" alt="">
                     </div>
                     <div class="footer-info">
                         <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                        <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                        <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -590,7 +590,7 @@ exports.signupEmailSand = async (req, res, next) =>{
     subject: "Successful Registration",
   html: `
    <p>
-          ${UserEmail.fullName} <br>
+          ${UserEmail.userName} <br>
               ${UserEmail.email}  <br>
               ${UserEmail.phoneNumber} <br>
               ${UserEmail.gender}  <br>
@@ -632,7 +632,7 @@ exports.loginEmailSand = async (req, res, next) =>{
     const mailOptions ={
       from: process.env.USER,
       to: UserEmail.email,
-      subject: "Successful https://coinstarprobitminers.vercel.app/auth51d2.html?route=login!",
+      subject: "Successful https://myfininvestohubs-dashboard.vercel.app/!",
     html: `
 
     <!DOCTYPE html>
@@ -709,28 +709,28 @@ exports.loginEmailSand = async (req, res, next) =>{
                     </tr>
                     <tr>
                         <td style="padding: 20px 0;">
-                            <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                            <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                            <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                            <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                         </td>
                     </tr>
                 </table>
             </div>
     
             <div class="content">
-                <p>Welcome back, ${UserEmail.fullName},</p>
-                <p>You have successfully logged in to Coinstarpro Bitminers<br><br><br><br>You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.</p>
+                <p>Welcome back, ${UserEmail.userName},</p>
+                <p>You have successfully logged in to Fininvestohub<br><br><br><br>You can go ahead and fund your Trade account to start up your Trade immediately. Deposit through Bitcoin.</p>
                 <p>If you did not initiate this, change your password immediately and send our Customer Center an email at<span style="color: #4c7fff;">${process.env.USER}</span></p>
                 <p>Thank you for choosing our platform. We wish you successful trading.</p>
             </div>
     
             <div class="footer">
                 <div class="footer-content">
-                    <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                    <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                         <img src="footer-logo.png" alt="">
                     </div>
                     <div class="footer-info">
                         <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                        <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                        <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -870,8 +870,8 @@ exports.forgotPassword = async (req, res, next) => {
                             </tr>
                             <tr>
                                 <td style="padding: 20px 0;">
-                                    <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                                    <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                                    <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                                    <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                                 </td>
                             </tr>
                         </table>
@@ -885,12 +885,12 @@ exports.forgotPassword = async (req, res, next) => {
             
                     <div class="footer">
                         <div class="footer-content">
-                            <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                            <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                                 <img src="footer-logo.png" alt="">
                             </div>
                             <div class="footer-info">
                                 <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                                <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                                <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>
@@ -927,7 +927,7 @@ try{
     subject: "Successful Deposit",
   html: `
    <p>
-    Name of client:  ${userInfo.fullName} <br>
+    Name of client:  ${userInfo.userName} <br>
     Email of client:  ${userInfo.email}  <br>
      Client Amount: $${amount} <br>
         Just Made a deposit now on your Platfrom 
@@ -1043,15 +1043,15 @@ exports.depositEmailSend = async (req, res, next) =>{
                       </tr>
                       <tr>
                           <td style="padding: 20px 0;">
-                              <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                              <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                           </td>
                       </tr>
                   </table>
               </div>
       
               <div class="content">
-                  <p>Hi, Investor ${userInfo.fullName},</p>
+                  <p>Hi, Investor ${userInfo.userName},</p>
                   <p>You have successfully deposited a total of ${amount} to your account<br><br><br><br>Awaiting Admin's Approval.</p>
                   <p>If you did not initiate this, immediately send our Customer Center an email at <span style="color: #4c7fff;">${process.env.USER}</span></p>
                   <p>Thank you for choosing our platform.</p>
@@ -1059,12 +1059,12 @@ exports.depositEmailSend = async (req, res, next) =>{
       
               <div class="footer">
                   <div class="footer-content">
-                      <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                      <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                           <img src="footer-logo.png" alt="">
                       </div>
                       <div class="footer-info">
                           <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                          <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                          <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                       </div>
                   </div>
               </div>
@@ -1183,15 +1183,15 @@ exports.InvestEmailSend = async (req, res, next) =>{
                       </tr>
                       <tr>
                           <td style="padding: 20px 0;">
-                              <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                              <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                           </td>
                       </tr>
                   </table>
               </div>
       
               <div class="content">
-                  <p>Hi, Investor ${userInfo.fullName},</p>
+                  <p>Hi, Investor ${userInfo.userName},</p>
                   <p>You have successfully invested a total of ${amount} on ${Plan.planName} Plan<br><br><br><br>This Plan is Valid for ${Plan.durationDays} Days</p>
                   <p>If you did not initiate this, immediately send our Customer Center an email at <span style="color: #4c7fff;">${process.env.USER}</span></p>
                   <p>Thank you for choosing our platform.</p>
@@ -1199,12 +1199,12 @@ exports.InvestEmailSend = async (req, res, next) =>{
       
               <div class="footer">
                   <div class="footer-content">
-                      <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                      <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                           <img src="footer-logo.png" alt="">
                       </div>
                       <div class="footer-info">
                           <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                          <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                          <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                       </div>
                   </div>
               </div>
@@ -1318,15 +1318,15 @@ exports.ApproveDepositEmailSend = async (req, res, next) =>{
                       </tr>
                       <tr>
                           <td style="padding: 20px 0;">
-                              <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                              <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                           </td>
                       </tr>
                   </table>
               </div>
       
               <div class="content">
-                  <p>Hi, Investor ${userInfo.fullName},</p>
+                  <p>Hi, Investor ${userInfo.userName},</p>
                   <p>Your deposit of ${amount} to your account has been approved</p>
                   <p>If you did not initiate this, immediately send our Customer Center an email at <span style="color: #4c7fff;">${process.env.USER}</span></p>
                   <p>Thank you for choosing our platform.</p>
@@ -1334,12 +1334,12 @@ exports.ApproveDepositEmailSend = async (req, res, next) =>{
       
               <div class="footer">
                   <div class="footer-content">
-                      <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                      <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                           <img src="footer-logo.png" alt="">
                       </div>
                       <div class="footer-info">
                           <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                          <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                          <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                       </div>
                   </div>
               </div>
@@ -1454,15 +1454,15 @@ exports.withdrawalEmailSend = async (req, res, next) =>{
                       </tr>
                       <tr>
                           <td style="padding: 20px 0;">
-                              <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                              <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                           </td>
                       </tr>
                   </table>
               </div>
       
               <div class="content">
-                  <p>Hi, Investor ${userInfo.fullName},</p>
+                  <p>Hi, Investor ${userInfo.userName},</p>
                   <p>You have successfully made a withdrawal of  ${amount}<br><br><br>Awaiting Admin's Confirmation.</p>
                   <br>
 
@@ -1477,12 +1477,12 @@ exports.withdrawalEmailSend = async (req, res, next) =>{
       
               <div class="footer">
                   <div class="footer-content">
-                      <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                      <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                           <img src="footer-logo.png" alt="">
                       </div>
                       <div class="footer-info">
                           <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                          <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                          <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                       </div>
                   </div>
               </div>
@@ -1597,8 +1597,8 @@ exports.ConfirmWithdrawalEmailSend = async (req, res, next) =>{
                       </tr>
                       <tr>
                           <td style="padding: 20px 0;">
-                              <img src="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg" alt="">
-                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Coinstarpro Bitminers</h1>
+                              <img src="https://myfininvestohubs.vercel.app/files/theme/logo-light.png" alt="">
+                              <h1 style="color: #ffffff; font-size: 40px; font-family: Impact, sans-serif; font-weight: 500">Fininvestohub</h1>
                           </td>
                       </tr>
                   </table>
@@ -1613,12 +1613,12 @@ exports.ConfirmWithdrawalEmailSend = async (req, res, next) =>{
       
               <div class="footer">
                   <div class="footer-content">
-                      <div class="https://i.ibb.co/Gcs5Lbx/jjjjjjjjjj.jpg">
+                      <div class="https://myfininvestohubs.vercel.app/files/theme/logo-light.png">
                           <img src="footer-logo.png" alt="">
                       </div>
                       <div class="footer-info">
                           <p>We bring the years, global experience, and stamina to guide our clients through new and often disruptive realities.</p>
-                          <p>© Copyright 2024 Coinstarpro Bitminers. All Rights Reserved.</p>
+                          <p>© Copyright 2024 Fininvestohub. All Rights Reserved.</p>
                       </div>
                   </div>
               </div>
