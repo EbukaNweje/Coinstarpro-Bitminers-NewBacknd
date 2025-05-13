@@ -677,7 +677,7 @@ async function sendExpirationEmail(user, investment, plan) {
               </div>
       
               <div class="content">
-                  <p>Dear ${user.fullName},</p>
+                  <p>Dear ${user.userName},</p>
             <p>Your investment in the ${plan.planName} plan has expired. <br> Continue investing on our platform to keep making profit.</p>
             <p>Investment Details:</p>
             <ul>
